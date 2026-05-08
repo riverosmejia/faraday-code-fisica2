@@ -1,42 +1,60 @@
-# Faraday – Physical Simulation Platform
+# Faraday – Plataforma de Simulación Física
 
-Faraday is a simple web application that visualises the electric field inside a Faraday cage. It is built with **TypeScript** and Vite, and renders the simulation using the **Canvas API**.
+Faraday es una **aplicación web** ligera que visualiza el campo eléctrico dentro de una jaula de Faraday. Está construida con **TypeScript** y Vite, y renderiza la simulación usando la **API de Canvas**. El proyecto está pensado tanto para entrenar conceptos de física como para servir como demostración de simulaciones interactivas en el navegador.
 
-## Features
+## Características principales
 
-- Real‑time simulation of the electric field.
-- Responsive layout for desktop, tablet and mobile.
-- Loader animation during initialisation.
-- Small bundle size – the output is only a few kilobytes.
+- **Simulación en tiempo real** del campo eléctrico con líneas de campo dinámicas.
+- **Diseño responsive**: funcional en escritorios, tabletas y móviles.
+- **Animación de carga** mientras se inicializa la simulación.
+- **Bajo consumo de recursos**: el bundle final mide solo unos kilobytes.
+- **Componentes reutilizables**: 
+  - `ElectricityCanvas.tsx` – lógica de renderizado.
+  - `Loader.tsx` – transición visual.
+  - Secciones estructuradas en `src/sections`.
+- **Gestión de dependencias** con npm y lockfile incluido.
 
-## Run locally
+## Cómo ejecutar localmente
 
 ```bash
-# Install dependencies
+# Instalar dependencias
 npm install
 
-# Start the dev server
+# Iniciar servidor de desarrollo
 npm run dev
 ```
 
-The app will be served at `http://localhost:5173`.
+La aplicación se sirve en `http://localhost:5173`.
 
-## Build for production
+## Construir para producción
 
 ```bash
 npm run build
 ```
 
-Output files are produced in `dist/`.
+Los archivos generados se colocan en la carpeta `dist/`.
 
-## Demo
+## Demo en línea
 
-[Go to the live demo](https://riverosmejia.github.io/simulation-faraday/).
+El despliegue está disponible en:
 
-## Contributing
+[https://riverosmejia.github.io/simulation-faraday/](https://riverosmejia.github.io/simulation-faraday/)
 
-Issues and pull requests are welcome.
+## Tecnologías usadas
+- **Node.js** (v20.x), **npm** 10.x
+- **Vite** como empaquetador y servidor de desarrollo
+- **React** con JSX + TypeScript
+- **Canvas API** para la visualización
+- **CSS** puro (sin frameworks) con variables CSS
+- **Jest** y **React Testing Library** (si se añaden tests)
 
----
+## Contribuir
 
-*Created to demonstrate physical simulation in a web application.*
+- Crea una rama a partir de `main`.
+- Aplica las convenciones de commit con `conventional‑commits`.
+- Añade tests si estás cambiando lógica.
+- Envía un pull‑request y espera la revisión.
+
+## Licencia
+
+MIT License – libre de uso con atribución obligatoria.
